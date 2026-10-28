@@ -5,7 +5,7 @@ pipeline {
 stage('Docker Build+Tag') {
     steps {
         sh 
-            docker build -t lala_ubuntu:latest .
+            docker build -t ubuntu:latest .
     }
 }
 
