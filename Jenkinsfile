@@ -4,8 +4,7 @@ pipeline {
 
 stage('Docker Build+Tag') {
     steps {
-        sh 
-            docker build -t ubuntu:latest .
+        sh 'docker build -t flask-hello-world:latest .'
     }
 }
 
