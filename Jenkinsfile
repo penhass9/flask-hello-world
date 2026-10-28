@@ -2,20 +2,12 @@
 pipeline {
     agent any
 
-stage('Docker Build+Tag') {
-    steps {
-        sh 'docker build -t flask-hello-world:latest .'
-    }
-}
-
-            }
-        }
-
-        stage('Hello World') {
+    stages {
+        stage('Docker Build+Tag') {
             steps {
-                echo 'Hello World'
-       
+                sh 'docker build -t flask-hello-world:latest .'
             }
         }
     }
 }
+
